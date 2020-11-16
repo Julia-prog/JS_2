@@ -15,7 +15,7 @@ const renderProduct = (title, price) => {
 }
 
 const catalogInit = (list = products) => {
-    list.map((item) => document.querySelector('.products').innerHTML += renderProduct(item.title, item.price));
+    list.forEach((el) => document.querySelector('.products').innerHTML += renderProduct(el.title, el.price));
 }
 
 catalogInit();
