@@ -1,10 +1,10 @@
 class ProductList{
     constructor(container = '.products') {
         this.container = container
-        this._goods = [];
-        this._allProducts = [];
-        this._fetchGoods();
-        this._render();
+        this._goods = []
+        this._allProducts = []
+        this._fetchGoods()
+        this._render()
     }
 
     _fetchGoods(){
@@ -46,5 +46,30 @@ getHTMLstring(){
 
 
 }
+
+/// Корзина
+// class Cart{    
+//     constructor(items = []){
+//         this.items = [] //Товары в корзине
+//         this._addItem(cartItem) //Добавить товар
+//         this._removeItem(id) //Удалить товар
+
+//         this._computeTotalValue() //Подсчитать общую стоимость
+//         this.clear() //Очисить корзину
+//         this.Order() //Оформить заказ
+//     }
+// }
+
+/// Товар в корзине
+// class cartItem{
+//     constructor(productItem, id){
+//         this.id = id
+//         this.title = productItem.title
+//         this.price = productItem.price
+//         this.img = productItem.img
+//         this.count = 1
+//         this._checkStatus() //Проверить наличие на складе
+//     }       
+// }
 
 new ProductList()
