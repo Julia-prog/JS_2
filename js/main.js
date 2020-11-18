@@ -5,6 +5,7 @@ class ProductList{
         this._allProducts = []
         this._fetchGoods()
         this._render()
+        this._totalCount()
     }
 
     _fetchGoods(){
@@ -24,6 +25,10 @@ class ProductList{
             this._allProducts.push(productObj);
             container.insertAdjacentHTML("afterbegin", productObj.getHTMLstring())
         }
+    }
+
+    _totalCount() {
+       return this._goods.reduce((a, b) => a + b.price, 0);    
     }
 
 }
@@ -72,4 +77,8 @@ getHTMLstring(){
 //     }       
 // }
 
-new ProductList()
+var a = new ProductList()
+
+console.log(a._totalCount())
+
+
